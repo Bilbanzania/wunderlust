@@ -92,6 +92,7 @@ header p {
 nav {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 }
 
 nav ul {
@@ -390,6 +391,10 @@ footer a:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -440,6 +445,7 @@ footer a:hover {
 
     nav {
         background-color: var(--black);
+        justify-content: center;
     }
 
     nav ul {
@@ -453,6 +459,7 @@ footer a:hover {
         color: var(--white);
         padding: 10px;
         cursor: pointer;
+        margin: 10px 0;
     }
 
     nav #menu-toggle input[type="checkbox"] {
@@ -468,6 +475,7 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
     }
 
     nav ul li {
