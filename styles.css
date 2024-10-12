@@ -1,0 +1,518 @@
+/* Mitchell Laypath */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Palette */
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+}
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#skip,
+nav label[for="toggle"],
+nav input[name="toggle"] {
+    position: absolute;
+    left: -9999px;
+}
+
+#skip:focus,
+nav label[for="toggle"]:focus,
+nav input[name="toggle"]:focus {
+    position: static;
+    left: auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #499BD2, #FFFFFF);
+    color: #333;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #logo img {
+    max-width: 150px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #205081;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+
+/* Navigation */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+nav {
+    display: flex;
+    align-items: flex-start;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: 2px solid #499BD2;
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 0;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #333;
+    background-color: #FFD700;
+    border-color: #FFD700;
+}
+
+/* Main Content */
+main {
+    background-color: var(--white);
+    padding: 20px;
+}
+
+#intro {
+    text-align: center;
+}
+
+#intro h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#img-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#img-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Plan Your Trip */
+#plan {
+    background-color: var(--yellow);
+    padding: 20px;
+    text-align: center;
+}
+
+#plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+#plan div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#plan section {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+#plan section:nth-child(1) {
+    background-color: var(--blue);
+}
+
+#plan section:nth-child(2) {
+    background-color: var(--teal);
+}
+
+#plan section:nth-child(3) {
+    background-color: var(--purple);
+}
+
+#plan section:nth-child(4) {
+    background-color: var(--dark-gray);
+}
+
+#plan section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#plan section a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#plan section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+#testimonials h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#testimonials div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#testimonials section {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+#testimonials section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#testimonials section h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#testimonials section p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#testimonials section q {
+    font-size: 1em;
+    font-style: italic;
+}
+
+/* About Your Destination */
+#about {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+}
+
+#about h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#about div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#about section {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+#about section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#about section h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#about section p {
+    font-size: 1em;
+}
+
+
+/* Contact Us */
+#contact {
+    background-color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+#contact h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--purple);
+}
+
+#contact .form-required {
+    color: var(--red);
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form div {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact input, #contact select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#contact input[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-size: 1em;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: var(--dark-gray);
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-gray);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--blue);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #img-grid {
+        flex-direction: column;
+    }
+
+    #plan div, #testimonials div, #about div {
+        flex-direction: column;
+    }
+
+    #contact form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contact form div {
+        flex: 1 1 45%;
+        max-width: 45%;
+        margin: 10px;
+    }
+
+    #contact form div:nth-child(3) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav {
+        background-color: var(--black);
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav #menu-toggle {
+        display: block;
+        text-align: center;
+        background-color: var(--teal);
+        color: var(--white);
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    nav #menu-toggle input[type="checkbox"] {
+        display: none;
+    }
+
+    nav #menu-toggle label {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav #menu-toggle input[type="checkbox"]:checked~ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--teal);
+        color: var(--white);
+        padding: 10px;
+        border-bottom: 1px solid var(--white);
+    }
+
+    nav ul li a {
+        color: var(--white);
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #intro h2 {
+        font-size: 1.5em;
+    }
+
+    #intro p {
+        font-size: 1em;
+    }
+
+    #plan h3, #testimonials h3, #about h3, #contact h3 {
+        font-size: 1.5em;
+    }
+
+    #plan section h4, #testimonials section h4, #about section h4 {
+        font-size: 1em;
+    }
+
+    #contact input, #contact select {
+        padding: 5px;
+    }
+
+    #contact input[type="submit"] {
+        padding: 10px 20px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
