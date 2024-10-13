@@ -405,48 +405,39 @@ footer a:hover {
     }
 
     nav ul li a {
-        color: var(--primary-color);
+        color: var(--dark-gray);
         text-decoration: none;
         font-weight: bold;
         text-transform: uppercase;
         padding: 10px 20px;
-        background-color: var(--background-color);
-        border: 2px solid var(--secondary-color);
+        background-color: var(--white);
+        border: 2px solid var(--blue);
         border-radius: 10px;
         transition: background-color 0.3s, border-color 0.3s;
     }
 
     nav ul li a:hover,
     nav ul li a:focus {
-        color: var(--primary-color);
-        background-color: var(--highlight-color);
-        border-color: var(--highlight-color);
+        color: var(--dark-gray);
+        background-color: var(--yellow);
+        border-color: var(--yellow);
     }
 }
 
 @media (max-width: 768px) {
-    header {
+    header, nav, #img-grid, #plan div, #testimonials div, #about div, #contact form {
         padding: 10px;
         flex-direction: column;
         align-items: center;
     }
 
-    header h1 {
+    header h1, header p, #intro h2, #intro p, #plan h3, #testimonials h3, #about h3, #contact h3, #plan section h4, #testimonials section h4, #about section h4 {
         font-size: 2em;
-        text-align: center;
-    }
-
-    header p {
-        font-size: 1em;
         text-align: center;
     }
 
     header #logo img {
         max-width: 100px;
-    }
-
-    nav {
-        justify-content: center;
     }
 
     nav ul {
@@ -456,16 +447,6 @@ footer a:hover {
 
     nav ul li {
         margin: 10px 0;
-    }
-
-    #img-grid, #plan div, #testimonials div, #about div {
-        flex-direction: column;
-    }
-
-    #contact form {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
     #contact form div {
@@ -481,19 +462,14 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    header {
+    header, nav, main, footer {
         padding: 10px;
         flex-direction: column;
         align-items: center;
     }
 
-    header h1 {
+    header h1, header p, #intro h2, #intro p, #plan h3, #testimonials h3, #about h3, #contact h3, #plan section h4, #testimonials section h4, #about section h4 {
         font-size: 2em;
-        text-align: center;
-    }
-
-    header p {
-        font-size: 1em;
         text-align: center;
     }
 
@@ -552,22 +528,6 @@ footer a:hover {
 
     main {
         padding: 10px;
-    }
-
-    #intro h2 {
-        font-size: 1.5em;
-    }
-
-    #intro p {
-        font-size: 1em;
-    }
-
-    #plan h3, #testimonials h3, #about h3, #contact h3 {
-        font-size: 1.5em;
-    }
-
-    #plan section h4, #testimonials section h4, #about section h4 {
-        font-size: 1em;
     }
 
     #contact input, #contact select {
