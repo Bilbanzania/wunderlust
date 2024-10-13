@@ -60,10 +60,18 @@ header {
     justify-content: space-between;
 }
 
+header #logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 header #logo img {
     max-width: 150px;
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 header h1 {
@@ -76,8 +84,8 @@ header p {
     font-size: 1.2em;
     color: #333;
     margin: 0;
+    padding-top: 10px;
 }
-
 
 /* Navigation */
 .sr-only {
@@ -106,20 +114,24 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #333;
+    color: var(--dark-gray);
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 20px;
-    background-color: #FFFFFF;
-    border: 2px solid #499BD2;
+    background-color: var(--white);
+    border: 2px solid var(--blue);
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
     margin-top: 0;
+    word-wrap: break-word;
+    /* This will handle long words */
+    margin: 0 5px;
+    /* Add margin between navigation items */
 }
 
 nav ul li a:hover,
